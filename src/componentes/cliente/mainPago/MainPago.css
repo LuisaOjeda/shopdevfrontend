@@ -1,11 +1,14 @@
 #pills-home{
     margin-left: 18em;
     margin-right: 18em;
-    border: 0.1em rgb(10, 196, 196) solid;
+    margin-bottom: 1em;
+    border: 0.1em #0674b9 solid;
+    border-radius: 1em;
     padding: 1em;
+
 }
 .card-header{
-    background-color: rgb(56, 56, 228);
+    background-image: linear-gradient( to right, #32a3e9,#1e46ae,#0674b9);
 }
 .table{
     border: 0.1em rgb(79, 78, 78) solid;
@@ -13,14 +16,33 @@
 #pills-profile{
     margin-left: 18em;
     margin-right: 18em;
-    border: 0.1em rgb(79, 78, 78) solid;
+    border: 0.1em #0674b9 solid;
+    border-radius: 1em;
     padding: 1em;
+    margin-bottom: 1em;
 }
 #subTotalPadre{
     display:flex;
     justify-content:space-between;
     padding: 0.5em;
+    align-items: center;
+    color: white;
+    margin-bottom: 1em;
 }
 #subTotal{
     width: 8em;;
+}
+.diseñobtn{
+    display: flex;
+    justify-content: space-evenly;
+}
+.estiloimg{
+    margin-left: 5em;
+    margin-top: 24px;
+}
+.contenidoProd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
 }

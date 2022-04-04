@@ -1,7 +1,21 @@
 import './MainPago.css';
 import React from 'react';
+import camiseta from '../../../assets/img/camiseta.png'
+import { useNavigate } from 'react-router-dom';
 
 export const MainPago = () => {
+    /* NECESARIO PARA EL FLUJO ENTRE RUTAS */
+    const navigate = useNavigate();
+
+
+    const mjsPago = () => {
+        alert("Su pago se a realizado con exito"+"\n" + "Revise su correo electronico")
+    }
+
+    const rutaTienda = () => {
+        goToHomeCliente()
+    }
+    
     return(
         <>
         <ul class="nav nav-pills mb-3" id="pills-tab" >
@@ -15,19 +29,19 @@ export const MainPago = () => {
         </li>
     </ul>
     <div class="tab-content" id="pills-tabContent">
+        {/*ENVIOS*/}
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            {/**/}
             <div class="card-header">
                 Datos de envio
             </div>
             <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required/>
+                    <input type="text" class="form-control" id="validationCustom01" value="" required/>
                 </div>
                 <div class="col-md-4">
                     <label for="validationCustom02" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required/>
+                    <input type="text" class="form-control" id="validationCustom02" value="" required/>
                 </div>
                 <div class="col-md-4">
                     <label for="validationCustomUsername" class="form-label">Correo</label>
@@ -48,8 +62,12 @@ export const MainPago = () => {
                 <div class="col-md-3">
                     <label for="validationCustom04" class="form-label">Departamento</label>
                     <select class="form-select" id="validationCustom04" required>
-                        <option selected disabled value="">Seleccione</option>
-                        <option>...</option>
+                        <option>Quindio</option>
+                        <option>Antioquia</option>
+                        <option>Caldas</option>
+                        <option>Nariño</option>
+                        <option>Meta</option>
+                        <option>Santander</option>
                     </select>
                 </div>
                 <div class="col-md-6">
@@ -102,7 +120,7 @@ export const MainPago = () => {
                         </label>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 diseñobtn">
                     <button class="btn btn-primary" type="submit">Volver a la bolsa</button>
                     <button class="btn btn-primary" type="submit">Siguiente</button>
                 </div>
@@ -123,23 +141,23 @@ export const MainPago = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">2</th>
                         <td>
                             <div class="card mb-3">
                                 <div class="row g-0">
                                     <div class="col-md-4">
-                                        <img src="..." class="img-fluid rounded-start" alt="..."/>
+                                        <img src={camiseta} class="img-fluid rounded-start estiloimg" alt="camiseta"/>
                                     </div>
                                     <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Titulo del producto</h5>
-                                            <p class="card-text">Descripcion del prodructo</p>
+                                        <div class="card-body contenidoProd">
+                                            <h5 class="card-title">Camiseta Gris</h5>
+                                            
                                             <p>Precio</p>
-                                            <p class="card-text"><small class="text-muted">$99999</small></p>
+                                            <p class="card-text"><small class="text-muted">$40000</small></p>
                                             <p>Cantidad</p>
                                             <input type="number"/>
                                         </div>
-                                        <button class="btn btn-primary" type="delete">Borrar</button>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -152,11 +170,19 @@ export const MainPago = () => {
                     SUBTOTAL
                     <input type="text" class="form-control" id="subTotal" />
                 </div>
-                <button class="btn btn-primary" type="submit">Seguir comprando</button>
-                <button class="btn btn-primary" type="submit">Pagar</button>
+                <div className='diseñobtn'>
+                <button class="btn btn-primary" type="submit" onClick={()=>rutaTienda()}>Seguir comprando</button>
+                <button class="btn btn-primary " type="submit" onClick={()=>mjsPago()}>Pagar</button>
+                </div>
+                
             </div>
         </div>
     </div>
         </>
     )
+    /*RUTAS */
+    function goToHomeCliente() {
+        let ruta = "/cliente/listaproductos";
+        navigate(ruta);
+    }
 }

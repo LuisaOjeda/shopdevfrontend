@@ -107,7 +107,7 @@ export const MainSelectProducto = () => {
             )}
 
             <div class="d-grid gap-2 d-md-block">
-                <button class="btn btn-primary -xl" type="button" style={{ background: '#155983' }} onClick={() => goToPago()}>Agregar al carrito</button>
+                <button class="btn btn-primary -xl estiloBoton" type="button" style={{ background: '#155983' }} onClick={() => goToPago()}>Agregar al carrito</button>
             </div>
 
 

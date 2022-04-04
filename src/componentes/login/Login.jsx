@@ -33,6 +33,8 @@ export const Login = () => {
                 goToHomeCliente();
             } else if(response.data.rol === 2){
                 goToAdminProductos();
+            } else if (response.data.rol != 1 && response.data.rol != 2){
+                alert("Señ@r usuario debe registrarse primero")
             }
             console.log(response);
         })

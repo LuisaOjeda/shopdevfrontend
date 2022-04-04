@@ -1,16 +1,11 @@
-.main{
-    height: 38em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
 .mainContainerPadre{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 72em;
     height: 31em;
+    margin-left: 19em;
 }
 .containerIzq{
     height: 31em;
@@ -96,4 +91,8 @@
     border-radius: 0.3rem;
     outline: 0;
     top: 2em;
+}
+.estiloBoton{
+    margin-left: 44em;
+    margin-bottom: 1em;
 }

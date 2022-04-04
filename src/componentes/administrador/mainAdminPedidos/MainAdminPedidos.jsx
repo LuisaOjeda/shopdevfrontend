@@ -23,10 +23,10 @@ export const MainAdminPedidos = () => {
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
+                            <td>06/04/2022</td>
+                            <td>Venus</td>
+                            <td>Camiseta Gris</td>
+                            <td>40000</td>
                             <td>
                                 <select name="" id="">
                                     <option value="">Pendiente</option>
@@ -37,42 +37,6 @@ export const MainAdminPedidos = () => {
                             <td>
                                 <i class="fa-solid fa-trash-can"></i>
                     
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>
-                                <select name="" id="">
-                                    <option value="">Pendiente</option>
-                                    <option value="">Finalizado</option>
-                                    <option value="">En proceso</option>
-                                </select>
-                            </td>
-                            <td>
-                                <i class="fa-solid fa-trash-can"></i>
-                                
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>
-                                <select name="" id="">
-                                    <option value="">Pendiente</option>
-                                    <option value="">Finalizado</option>
-                                    <option value="">En proceso</option>
-                                </select>
-                            </td>
-                            <td>
-                                <i class="fa-solid fa-trash-can"></i>
-                                
                             </td>
                         </tr>
                     </tbody>
